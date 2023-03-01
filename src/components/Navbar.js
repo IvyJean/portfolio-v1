@@ -3,28 +3,30 @@ import styled, { css } from 'styled-components/macro'
 import { Link } from 'react-router-dom'
 import { menuData } from '../data/MenuData'
 import { FaBars } from 'react-icons/fa'
+import Menu from '../images/menu.svg'
 
 const Nav = styled.nav`
   height: 100%;
   display: flex;
   justify-content: space-between;
-  margin: 4rem 0 0;
+  margin: 3rem 0 0;
   padding: 3vh 5vw;
   z-index: 100;
   font-size: 17px;
   width: 100%;
 
   @media screen and (max-width: 1300px) {
-    padding: 1rem 2rem;
+    margin: 1rem 0 0;
+    /* padding: 3vh 5vw; */
   }
 
-  @media screen and (max-width: 868px) {
+  /* @media screen and (max-width: 868px) {
     padding: 1rem 2rem;
   }
 
   @media screen and (max-width: 768px) {
     padding: 1rem 2rem;
-  }
+  } */
 `
 const NavLink = css`
   color: #fff;
@@ -40,7 +42,7 @@ const Logo = styled(Link)`
   ${NavLink}
   font-style: italic;
 `
-const MenuBars = styled(FaBars)`
+const MenuBars = styled.img`
   display: none;
 
   @media screen and (max-width: 768px) {
@@ -72,6 +74,18 @@ const NavHr = styled.hr`
     background: #fff;
     margin: 0 auto;
     margin-bottom: -5rem;
+
+    @media screen and (max-width: 1300px) {
+      margin-bottom: -12rem;
+    }
+
+   @media screen and (max-width: 868px) {
+    margin-bottom: -12rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: -12rem;
+    }
 `
 
 const Navbar = ({ toggle }) => {
@@ -80,7 +94,7 @@ const Navbar = ({ toggle }) => {
     <>
     <Nav >
       <Logo to="/">IVY</Logo>
-      <MenuBars onClick={toggle}/>
+      <MenuBars src={Menu} onClick={toggle}/>
       <NavMenu>
         {menuData.map((item, index) => (
           <NavMenuLinks to={item.link} key={index}>
