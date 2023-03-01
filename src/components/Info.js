@@ -11,7 +11,8 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 800px;
-  color: #fff;
+  color: #000;
+  background: #edf2f4;
 
   @media screen and (max-width: 1300px) {
     grid-template-columns: 1fr;
@@ -26,6 +27,24 @@ const Container = styled.div`
     grid-template-columns: 1fr;
 
   }
+`
+const ContainerWrapper = styled.div`
+  /* background: red;
+  display: flex;
+  width: 100%; */
+  /* @media screen and (max-width: 1300px) {
+    grid-template-columns: 1fr;
+  }
+
+    @media screen and (max-width: 868px) {
+      grid-template-columns: 1fr;
+
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+
+  } */
 `
 const ColumnLeft = styled.div`
   display: flex;
@@ -67,6 +86,14 @@ const ColumnRight = styled.div`
     }
   }
 `
+const LineSpan = styled.div`
+  position: absolute;
+  bottom: -58rem;
+  right: 1rem;
+  font-size: 145px;
+  font-weight: bold;
+  color: #cce6f4;
+`
 
 const Info = ({
   heading,
@@ -79,15 +106,20 @@ const Info = ({
   return (
     <Section>
       <Container>
-        <ColumnLeft>
-          <h1>{heading}</h1>
-          <p>{paragraphOne}</p>
-          <p>{paragraphTwo}</p>
-          <Button to="/homes" primary="true">{buttonLabel}</Button>
-        </ColumnLeft>
-        <ColumnRight reverse={reverse}>
-          <img src={image} alt="home" />
-        </ColumnRight>
+        {/* <ContainerWrapper> */}
+          <ColumnLeft>
+            <h1>{heading}</h1>
+            <p>{paragraphOne}</p>
+            <p>{paragraphTwo}</p>
+            <Button to="/homes" primary="true">{buttonLabel}</Button>
+          </ColumnLeft>
+          <ColumnRight reverse={reverse}>
+            <img src={image} alt="home" />
+          </ColumnRight>
+        {/* </ContainerWrapper> */}
+      <LineSpan>
+        EXPERIENCE
+      </LineSpan>
       </Container>
     </Section>
   )
