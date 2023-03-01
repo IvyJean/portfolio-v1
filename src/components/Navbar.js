@@ -5,10 +5,11 @@ import { menuData } from '../data/MenuData'
 import { FaBars } from 'react-icons/fa'
 
 const Nav = styled.nav`
-  height: 70px;
+  height: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 2rem 4rem 1rem;
+  margin: 4rem 0 0;
+  padding: 3vh 5vw;
   z-index: 100;
   font-size: 17px;
   width: 100%;
@@ -60,15 +61,23 @@ const NavMenuLinks = styled(Link)`
   ${NavLink}
 
   &:hover {
-    color: #8ec5fc;
+    color: #89a5b7;
     transition: 0.3s;
     transform: translateY(-2px);
   }
+`
+const NavHr = styled.hr`
+    width:90%;
+    height: 5px;
+    background: #fff;
+    margin: 0 auto;
+    margin-bottom: -5rem;
 `
 
 const Navbar = ({ toggle }) => {
 
   return (
+    <>
     <Nav >
       <Logo to="/">IVY</Logo>
       <MenuBars onClick={toggle}/>
@@ -80,6 +89,8 @@ const Navbar = ({ toggle }) => {
         ))}
       </NavMenu>
     </Nav>
+    <NavHr />
+    </>
   )
 }
 
