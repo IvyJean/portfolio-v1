@@ -20,8 +20,8 @@ function App() {
       <Navbar toggle={toggle}/>
       <Dropdown toggle={toggle} isOpen={isOpen}/>
       <Hero />
-      <Projects heading="Projects" />
       <Info {...InfoDataOne}/>
+      <Projects heading="Projects" />
     </Fragment>
   );
 }
