@@ -1,33 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
-import avatar from '../images/avatar.png'
 
 const HeroContainer = styled.div`
   /* background: #01131c; */
   background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(1,19,28,1) 100%);
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; */
   max-width: 1800px;
   margin: 0 auto;
   padding: 0 5vw;
   display: block;
-  /* position: relative; */
-  /* padding: 0 5rem; */
-  /*
-  margin-top: -20px; */
   color: #fff;
 
-  /* :before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 2;
-  } */
+  @media screen and (max-width: 1300px) {
+    height: 50%
+  }
+
+  @media screen and (max-width: 868px) {
+    height: 50%
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 50%
+  }
 `
 
 // const HeroBg = styled.div`
@@ -116,7 +109,7 @@ const HeroItems = styled.div`
 `
 
 const HeroH1 = styled.div`
-  font-size: clamp(1.5rem, 6vw, 4rem);
+  font-size: clamp(2rem, 7vw, 5rem);
   /* margin-bottom: 1.5rem; */
   letter-spacing: 3px;
   display: flex;
@@ -125,35 +118,37 @@ const HeroH1 = styled.div`
     margin-left: 10px;
   }
 
-  @media screen and (max-width: 1300px) {
+  /* @media screen and (max-width: 1300px) {
     display: block;
 
     span {
       margin: 0;
     }
-  }
+  } */
 
-  @media screen and (max-width: 868px) {
+  /* @media screen and (max-width: 868px) {
     display: block;
 
     span {
       margin: 0;
     }
-  }
+  } */
 
   @media screen and (max-width: 768px) {
     display: block;
-
-    span {
-      margin: 0;
-    }
+    font-size: 3rem;
   }
 `
 
 const HeroP = styled.div`
-  font-size: clamp(1rem, 3vw, 3rem);
+  font-size: clamp(2rem, 3vw, 3rem);
   /* margin-bottom: 3rem; */
   font-weight: 400;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    font-size: 1.5rem;
+  }
 `
 const Test1 = styled.div`
   position: absolute;
